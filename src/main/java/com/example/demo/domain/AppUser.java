@@ -1,11 +1,10 @@
 package com.example.demo.domain;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -17,23 +16,26 @@ import javax.persistence.JoinColumn;
 public class AppUser {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(columnDefinition = "serial")
 	private Long id; 
+	@Column (name = "preferredlocale")
 	private String preferredLocale; 
+	@Column (name = "username")
 	private String userName; 
 	private String access; 
+	@Column(name = "preferredmarking")
 	private String preferredMarking; 
 	private Boolean enabled; 
 	private String email; 
 	private Long spaceId;
+	private String alias; 
+	private String urn; 
 	
 	@ManyToMany
 	@JoinTable(
 			name = "app_group_membership",
-			joinColumns = @JoinColumn(name = "appuser_id"),
-			inverseJoinColumns = @JoinColumn (name = "appgroup_id"))
-	private Set<AppGroup> groups; 
+			joinColumns = @JoinColumn(name = "user_id"),
+			inverseJoinColumns = @JoinColumn (name = "group_id"))
+	private Set<AppGroup> groups = new HashSet<>(); 
 	
 	
 	public AppUser() {
@@ -41,15 +43,18 @@ public class AppUser {
 	}
 	
 	
-	public AppUser(String preferredLocale, String userName, String access, String preferredMarking, Boolean enabled,
-			String email, Long spaceId) {
+	public AppUser(Long id, String preferredLocale, String userName, String access, String preferredMarking, Boolean enabled,
+			String email,String alias, String urn, Long spaceId) {
 		super();
+		this.id = id; 
 		this.preferredLocale = preferredLocale;
 		this.userName = userName;
 		this.access = access;
 		this.preferredMarking = preferredMarking;
 		this.enabled = enabled;
 		this.email = email;
+		this.alias = alias; 
+		this.urn = urn; 
 		this.spaceId = spaceId;
 	}
 
@@ -107,7 +112,28 @@ public class AppUser {
 	}
 	public void setGroups(Set<AppGroup> groups) {
 		this.groups = groups;
+	}
+
+
+	public String getAlias() {
+		return alias;
+	}
+
+
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+
+
+	public String getUrn() {
+		return urn;
+	}
+
+
+	public void setUrn(String urn) {
+		this.urn = urn;
 	} 
+	
 	
 	
 

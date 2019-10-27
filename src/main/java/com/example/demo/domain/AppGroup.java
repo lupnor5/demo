@@ -14,7 +14,6 @@ public class AppGroup {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@Column(columnDefinition = "serial")
 	private Long id; 
 	private String name; 
 	private Boolean isAdmin;

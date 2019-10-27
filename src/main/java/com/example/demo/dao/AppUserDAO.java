@@ -2,12 +2,15 @@ package com.example.demo.dao;
 
 public class AppUserDAO {
 	
+	private Long id; 
 	private String preferredLocale; 
 	private String userName; 
 	private String access; 
 	private String preferredMarking; 
 	private Boolean enabled; 
 	private String email; 
+	private String alias; 
+	private String urn; 
 	private Long spaceId;
 	
 	public String getPreferredLocale() {
@@ -52,6 +55,26 @@ public class AppUserDAO {
 	public void setSpaceId(Long spaceId) {
 		this.spaceId = spaceId;
 	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getAlias() {
+		return alias;
+	}
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+	public String getUrn() {
+		return urn;
+	}
+	public void setUrn(String urn) {
+		this.urn = urn;
+	}
+	
+	
 	
 
 }
