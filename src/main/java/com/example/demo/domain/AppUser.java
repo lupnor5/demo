@@ -42,7 +42,6 @@ public class AppUser {
 		//Default constructor used by JPA
 	}
 	
-	
 	public AppUser(Long id, String preferredLocale, String userName, String access, String preferredMarking, Boolean enabled,
 			String email,String alias, String urn, Long spaceId) {
 		super();
@@ -57,7 +56,6 @@ public class AppUser {
 		this.urn = urn; 
 		this.spaceId = spaceId;
 	}
-
 
 	public Long getId() {
 		return id;
@@ -113,28 +111,16 @@ public class AppUser {
 	public void setGroups(Set<AppGroup> groups) {
 		this.groups = groups;
 	}
-
-
 	public String getAlias() {
 		return alias;
 	}
-
-
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
-
-
 	public String getUrn() {
 		return urn;
 	}
-
-
 	public void setUrn(String urn) {
 		this.urn = urn;
 	} 
-	
-	
-	
-
 }
