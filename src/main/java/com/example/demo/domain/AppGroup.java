@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -19,7 +20,7 @@ public class AppGroup {
 	private Boolean isAdmin;
 	
 	@ManyToMany(mappedBy = "groups")
-	private Set<AppUser> users; 
+	private Set<AppUser> users = new HashSet<>(); 
 	
 	public AppGroup() {
 		//Default constructor used by JPA 

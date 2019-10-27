@@ -6,5 +6,7 @@ public interface AppUserService {
 	
 public void save(AppUserDAO appUserDAO); 
 
+public void delete(Long id); 
+
 
 }
