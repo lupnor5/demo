@@ -4,9 +4,8 @@ import com.example.demo.dao.AppUserDAO;
 
 public interface AppUserService {
 	
-public void save(AppUserDAO appUserDAO); 
+ void save(AppUserDAO appUserDAO); 
 
-public void delete(Long id); 
-
+ void delete(Long id); 
 
 }

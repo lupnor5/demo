@@ -73,8 +73,5 @@ public class AppUserDAO {
 	public void setUrn(String urn) {
 		this.urn = urn;
 	}
-	
-	
-	
 
 }

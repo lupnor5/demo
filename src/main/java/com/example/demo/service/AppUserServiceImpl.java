@@ -37,7 +37,6 @@ public class AppUserServiceImpl implements AppUserService {
 				);
 		
 		appUser.getGroups().add(group); 
-	    
 		repository.save(appUser); 
 		
 	}
