@@ -5,7 +5,7 @@ import com.example.demo.dao.AppUserDAO;
 public interface AppUserService {
 	
 /**
- * Create a new {@link AppUSer} and its default relationship from the input 	
+ * Create a new {@link AppUSer} and its default relationship with a group. 	
  * @param appUserDAO the input data to create an user 
  */
 	
