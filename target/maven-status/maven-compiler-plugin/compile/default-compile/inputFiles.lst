@@ -1,0 +1,9 @@
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/repository/AppUserRepository.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/domain/AppGroup.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/service/AppUserService.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/DemoApplication.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/service/AppUserServiceImpl.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/domain/AppUser.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/controller/AppUserController.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/dao/AppUserDAO.java
+/home/wsuser/Demos/demo/src/main/java/com/example/demo/repository/AppGroupRepository.java
